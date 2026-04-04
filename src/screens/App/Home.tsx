@@ -1,11 +1,8 @@
-import { Text, View } from 'react-native';
-import React from 'react';
+import DashboardScreen from "./DashboardScreen";
 
 const Home = () => {
   return (
-    <View>
-      <Text>Home</Text>
-    </View>
+    <DashboardScreen />
   );
 };
 

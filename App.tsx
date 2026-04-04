@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { ToastProvider } from 'react-native-toast-notifications';

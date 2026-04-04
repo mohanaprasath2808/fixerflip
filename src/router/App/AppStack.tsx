@@ -7,7 +7,7 @@ const Stack = createNativeStackNavigator();
 const AppStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerTitleAlign: 'center' }}>
-      <Stack.Screen name={navigationStrings.HOME} component={Home} />
+      <Stack.Screen name={navigationStrings.HOME} component={Home} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 };

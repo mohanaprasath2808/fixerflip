@@ -7,5 +7,5 @@ export const useRoute = () => {
             throw new Error('useRoute must be used within AuthContextProvider');
         }
         const {isLogin} = context;
-    return isLogin ? 'app' : 'auth';
+    return !isLogin ? 'app' : 'auth';
 }
