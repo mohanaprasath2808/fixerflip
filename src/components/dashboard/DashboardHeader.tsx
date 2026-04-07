@@ -3,7 +3,7 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import DashboardBgImg from '../../assets/dashboard-bg-img.svg';
 import FixerFlipLogo from '../../assets/fixer-flip-logo.svg';
-import { COLORS } from '../../constants/theme';
+import { COLORS, TYPOGRAPHY } from '../../constants/theme';
 
 interface DashboardHeaderProps {
   welcomeText: string;
@@ -27,16 +27,17 @@ const DashboardHeader = ({
 
       <LinearGradient
         colors={[
-          'rgba(255,255,255,0.82)',
-          'rgba(255,255,255,0.08)',
-          'rgba(255,255,255,0)',
+          '#FFFFFF',
+          'rgba(255,255,255,0)'
         ]}
-        locations={[0, 0.45, 1]}
+        start={{ x: 0.5, y: 0 }}
+        end={{ x: 0.5, y: 0.5 }}
+        locations={[0, 1]}
         style={styles.topOverlay}
       />
 
       <View style={styles.logoRow}>
-        <FixerFlipLogo width={170} height={32} />
+        <FixerFlipLogo width={139} height={26} />
       </View>
 
       <View style={styles.contentRow}>
@@ -74,25 +75,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   contentRow: {
-    marginTop: 16,
+    marginTop: 20,
     paddingHorizontal: 16,
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'space-between',
   },
   welcomeText: {
-    fontFamily: 'SF Pro Display',
+    ...TYPOGRAPHY.HEADING_3,
     fontWeight: '600',
-    fontSize: 28,
-    lineHeight: 34,
-    letterSpacing: 0.56,
     color: '#1E2939',
   },
   userNameText: {
-    fontFamily: 'SF Pro Text',
-    fontWeight: '500',
-    fontSize: 18,
-    lineHeight: 22,
+    ...TYPOGRAPHY.BODY_1_MEDIUM,
     letterSpacing: 0.18,
     color: COLORS.TEXT_PRIMARY_80,
     marginTop: 2,

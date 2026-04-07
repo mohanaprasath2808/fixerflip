@@ -38,14 +38,16 @@ const DashboardScreen = () => {
         <DashboardHeader
           welcomeText="Welcome Back 👋"
           userName="Sarah"
-          avatarUrl="https://i.pravatar.cc/120?img=47"
+          avatarUrl="https://i.pravatar.cc/120?img=27"
         />
         <PortfolioCard activeDeals={3} averageRoi="32%" flipScore="7.9" />
         <QuickActions />
         {HOME_SECTIONS.map(section => (
           <View key={section} style={styles.sectionCard}>
             <Text style={styles.sectionTitle}>{section}</Text>
-            <Text style={styles.sectionSubtitle}>Section placeholder - we will build this next.</Text>
+            <Text style={styles.sectionSubtitle}>
+              Section placeholder - we will build this next.
+            </Text>
           </View>
         ))}
       </ScrollView>

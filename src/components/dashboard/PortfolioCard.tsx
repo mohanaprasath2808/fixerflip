@@ -26,14 +26,14 @@ const PortfolioCard = ({
                 <Text style={styles.metricValue}>{activeDeals}</Text>
               </View>
 
-              <View style={styles.metricCenter}>
+              <View>
                 <Text style={styles.metricLabel}>Avg ROI</Text>
                 <Text style={[styles.metricValue, styles.roiValue]}>
                   {averageRoi}
                 </Text>
               </View>
 
-              <View style={styles.metricRight}>
+              <View>
                 <Text style={styles.metricLabel}>FlipScore</Text>
                 <Text style={styles.metricValue}>{flipScore}</Text>
               </View>
@@ -48,12 +48,11 @@ const PortfolioCard = ({
 const styles = StyleSheet.create({
   shell: {
     marginHorizontal: 24,
-    marginTop: -40,
+    marginTop: -45,
   },
   card: {
     borderRadius: 16,
-    paddingHorizontal: 18,
-    paddingVertical: 16,
+    padding: 20,
     backgroundColor: COLORS.BACKGROUND_COLOR,
     shadowColor: '#FFFFF99',
     shadowOffset: { width: -6, height: -6 },
@@ -95,12 +94,6 @@ const styles = StyleSheet.create({
   },
   roiValue: {
     color: COLORS.SUCCESS,
-  },
-  metricCenter: {
-    alignItems: 'center',
-  },
-  metricRight: {
-    alignItems: 'flex-end',
   },
 });
 
